@@ -1,7 +1,8 @@
 import { Box, CssBaseline, ThemeProvider } from "@mui/material";
 import React from "react";
 import theme from "../theme";
-import Greetings from "./Greetings";
+import Tabs from "./Tabs";
+import SimpleBar from "./SimpleBn";
 
 export default function App(): JSX.Element {
   return (
@@ -16,7 +17,7 @@ export default function App(): JSX.Element {
       >
         <main>
           {/* This is where your app content should go */}
-          <Greetings />
+          <Tabs></Tabs>
         </main>
       </Box>
     </ThemeProvider>
