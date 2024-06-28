@@ -6,21 +6,22 @@ import {Person, Group, Settings} from '@mui/icons-material';
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
 
-export default function SimpleBar() {
+export default function SimpleBar(props: any) {
   const [value, setValue] = React.useState(0);
 
   return (
-    <Box sx={{ width: '100%' }}>
+    <Box sx={{ width: '100%', marginTop:'auto' }}>
+
       <BottomNavigation
         showLabels
         value={value}
         onChange={(event, newValue) => {
-          setValue(newValue);
+          props.setValue(newValue);
         }}
       >
-        <BottomNavigationAction icon={<Person />} />
-        <BottomNavigationAction icon={<Group />} />
-        <BottomNavigationAction icon={<Settings />} />
+        <BottomNavigationAction value='single' icon={<Person />} />
+        <BottomNavigationAction value='multiple' icon={<Group />} />
+        <BottomNavigationAction value='config' icon={<Settings />} />
       </BottomNavigation>
     </Box>
   );

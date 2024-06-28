@@ -69,13 +69,10 @@ export default function SignIn() {
             alignItems: 'center',
           }}
         >
-          <Typography component="h1" variant="h5" color='black'>
-            Form
-          </Typography>
-          <Box component="form" onSubmit={handleSubmit} noValidate sx={{ mt: 3 }}>
+          <Box component="form" onSubmit={handleSubmit} noValidate sx={{ mt: 0 }}>
             
            
-            <Typography component="h2" variant="h5" textAlign='left' color='black'>
+            <Typography component="h1" variant="body1" textAlign='left' color='black' sx={{mt: 1, color:'red'}}>
               Dados Pessoais
             </Typography>
             
@@ -110,14 +107,14 @@ export default function SignIn() {
                   fullWidth
                   name="endereco"
                   label="Endereco"
-                  id="enderco"
+                  id="endereco"
                   autoComplete="endereco"
                 />
               </Grid>
               
             </Grid>
 
-            <Typography component="h3" variant="h5" textAlign='left' color='black' sx={{mt: 1}}>
+            <Typography component="h1" variant="body1" textAlign='left' color='black' sx={{mt: 1, color:'red'}}>
               Dados Sociais
             </Typography>
             
@@ -174,11 +171,26 @@ export default function SignIn() {
               </Grid>
             </Grid>
 
+            <Typography component="h1" variant="body1" textAlign='left' color='black' sx={{mt: 1, color:'red'}}>
+              Dados de Proxy 
+            </Typography>
+
+            <Grid item xs={12}>
+                <TextField
+                  margin="normal"
+                  required
+                  fullWidth
+                  name="ip-proxy"
+                  label="IP do Proxy"
+                  id="ip-proxy"
+                  autoComplete="proxy"
+                />
+              </Grid>      
             <Button
               type="submit"
               fullWidth
               variant="contained"
-              sx={{ mt: 3, mb: 2 }}
+              sx={{ mt: 3, mb: 2, bgcolor: 'red'}}
             >
               Enviar
             </Button>
