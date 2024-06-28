@@ -23,10 +23,13 @@
   "dependencies": {
     "@emotion/react": "^11.9.3",
     "@emotion/styled": "^11.9.3",
+    "@hookform/resolvers": "^3.6.0",
     "@mui/icons-material": "^5.15.20",
     "@mui/material": "^5.9.1",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "react-hook-form": "^7.52.0",
+    "yup": "^1.4.0"
   },
   "devDependencies": {
     "@types/node": "^16.11.45",
